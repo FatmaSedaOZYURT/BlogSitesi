@@ -1,0 +1,67 @@
+body{
+    /* background-color: #1c033d; */
+    background-color: #fff;
+    color: #53605e;
+}
+#siteIciArama input{
+    font-size: .875rem;
+}
+#menu{
+    font-size: 16px;
+}
+#menu a i{
+    margin : 3px;
+}
+div{
+    /* border: 2px solid; */
+}
+.onMakale{
+    width: 140px;
+    height: 100px;
+    background-color: rgb(4, 50, 100);
+    align-items: center;
+    margin-right: 2px;
+    display: flex;
+    align-items: center;
+}
+.onMakale a{
+    text-align: center;
+}
+.onMakale:hover{
+    opacity: 0.5;
+}
+.makaleOnizleme{
+    width: 738px;
+    height: 250px;
+}
+#oneCikanMakalelerDiv{
+    width: 738px;
+    height:270px;
+}
+.makaleOnizleme header span{
+    font-size: 12px;
+}
+.kategoriler{
+    width: 190px;
+    height: 600px;
+    background-color: rgb(10, 19, 58);
+    color: whitesmoke;
+}
+.kategoriler li{
+    font-size: 14px;
+}
+#makaleOneCikan{
+    width: 714px;
+    /* height: 310px; */
+    height: auto;
+}
+#takipFooter i{
+    margin: 10px;
+}
+.footerMenu p{
+    text-align: center;
+}
+#yorumlar{
+    /* border:0.5px solid; */
+    border-color: #53605e;
+}

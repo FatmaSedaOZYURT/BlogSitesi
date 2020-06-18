@@ -1,0 +1,565 @@
+<head>
+    <meta charset="utf-8" />
+    <title>TechAtak</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="TechAtak.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-lg navbar-light ">
+                        <div class="container-fluid">
+                            <a href="www.techatak.html" class="navbar-brand" id="logo">
+                                <img src="TechAtak_Logo.svg" alt="logo">
+                            </a>
+                            <button class=" navbar-toggler" type="button" data-toggle="collapse" data-target="#menu">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="menu">
+                                <!-- <div id="menuSecenekleri"> -->
+                                <ul class="navbar-nav m-auto">
+                                    <li class="nav-item">
+                                        <a class="nav-link " href="javascript:void(0)">Yazılım</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link " href="javascript:void(0)">Sistem</a>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class=" nav-link " href="javascript:void(0)">Web&Grafik</a>
+                                    </li>
+                                    <li class="dropdown nav-item ">
+                                        <a class="nav-link" href="javascript:void(0)" role="button"
+                                            data-toggle="dropdown" id="makaleTurleri" aria-haspopup="true"
+                                            aria-expanded="false">Makaleler</a>
+                                        <div class="dropdown-menu" aria-labelledby="makaleTurleri">
+                                            <a class="dropdown-item" href="javascript:void(0)">.Net Framework</a>
+                                            <a class="dropdown-item" href="javascript:void(0)">.Net Core</a>
+                                            <a class="dropdown-item" href="javascript:void(0)">C#</a>
+                                            <a class="dropdown-item" href="javascript:void(0)">SQL</a>
+                                            <a class="dropdown-item" href="javascript:void(0)">Python</a>
+                                        </div>
+                                    </li>
+                                    <li class="nav-item ">
+                                        <a class="nav-link " href="javascript:void(0)">Haberler</a>
+                                    </li>
+                                    <li class="dropdown nav-item ">
+                                        <a class="nav-link " href="javascript:void(0)" role="button"
+                                            data-toggle="dropdown" id="ekBilgi" aria-haspopup="true"
+                                            aria-expanded="false">...</a>
+                                        <div class="dropdown-menu" aria-labelledby="ekBilgi">
+                                            <a class="dropdown-item" href="javascript:void(0)">Hakkımızda</a>
+                                            <a class="dropdown-item" href="javascript:void(0)">İletişim</a>
+                                            <a class="dropdown-item" href="javascript:void(0)">Yardım</a>
+                                            <a class="dropdown-item" href="javascript:void(0)">Sıkça Sorulan Sorular</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <form class="form-inline my-2 my-lg-0 mr-auto" id="siteIciArama">
+                                    <input class="form-control mr-sm-2" type="search" placeholder="Site içinde ara...">
+                                </form>
+                                <a href="https://www.facebook.com">
+                                    <i class="fa fa-facebook-square"></i>
+                                </a>
+
+                                <a href="https://www.instagram.com">
+                                    <i class="fa fa-instagram text-warning"></i>
+                                </a>
+
+                                <a href="https://twitter.com">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+
+                                <a href="https://www.linkedin.com/company">
+                                    <i class="fa fa-linkedin-square text-dark"></i>
+                                </a>
+                                <a href="https://www.youtube.com">
+                                    <i class="fa fa-youtube-play text-danger"></i>
+                                </a>
+                                <a href="https://www.github.com">
+                                    <i class="fa fa-github text-dark"></i>
+                                </a>
+                                <a href="javascript:void(0)"><i class="material-icons">notifications</i></a>
+                                <a href="javascript:void(0)" class="text-decoration-none text-dark" data-toggle="modal"
+                                    data-target="#loginSayfasi">Giriş Yap</a>
+                                <a>&nbsp;</a>
+                                <a href="javascript:void(0)" class="text-decoration-none text-dark" data-toggle="modal"
+                                    data-target="#kayıtOlSayfasi">Üye Ol</a>
+
+                            </div>
+
+                        </div>
+                        <!--Login Sayfası Modal-->
+                        <div class="modal fade" id="loginSayfasi" tabindex="-1" role="dialog"
+                            aria-labelledby="loginSayfasiEkSayfa" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="loginSayfasiEkSayfa">Giriş Yap</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Kapat">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="loginPage">
+                                            <input type="email" class="form-control" id="nickName"
+                                                placeholder="örnek@gmail.com" />
+                                            <br />
+                                            <input type="password" class="form-control" id="password"
+                                                placeholder="Şifre" />
+                                            <br />
+                                            <button id="btnOturumAc" class="btn btn-primary form-control">Oturum
+                                                Aç</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div class="container">
+                                            <a href="javascript:void(0)" data-toggle="modal"
+                                                data-target="#kayıtOlSayfasi"
+                                                class="text-decoration-none text-dark">Kayıt Ol</a>
+                                            <a href="javascript:void(0)" class="text-decoration-none text-dark">Şifremi
+                                                Unuttum</a>
+                                        </div>
+                                        <hr width="205" />
+                                        <span>veya</span>
+                                        <hr width="205" />
+                                        <br />
+                                        <div class="container">
+                                            <a href="javascript:void(0)" class="text-decoration-none text-dark"><i
+                                                    class="fa fa-facebook-square text-info"></i>&nbsp;&nbsp;Facebook İle
+                                                Giriş Yap</a>
+                                            <a href="javascript:void(0)" class="text-decoration-none text-dark"><i
+                                                    class="fa fa-google-plus-square text-danger"></i>&nbsp;&nbsp;Google
+                                                İle Giriş Yap</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Kayıt Ol Sayfası Modal-->
+                        <div class="modal fade" id="kayıtOlSayfasi" tabindex="-1" role="dialog"
+                            aria-labelledby="kayıtOlSayfasiEkSayfa" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="kayıtOlSayfasiEkSayfa">Üye Ol</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Kapat">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form id="loginPage">
+                                            <input type="email" class="form-control" id="nickName"
+                                                placeholder="E-Posta" />
+                                            <br />
+                                            <input type="password" class="form-control" id="password"
+                                                placeholder="Şifre Oluştur" />
+                                            <!-- <i class="fa fa-eye"></i> -->
+                                            <br>
+                                            <div class="custom-control custom-checkbox mr-sm-2">
+                                                <input type="checkbox" class="custom-control-input"
+                                                    id="kullanimKosullari" checked>
+                                                <label class="custom-control-label" for="kullanimKosullari"><a
+                                                        href="javascript:void(0)">Kullanım Koşulları</a>,<a
+                                                        href="javascript:void(0)">Kişisel Veriler ve Gizlilik
+                                                        Politikasını</a> okudum ve onaylıyorum.</label>
+                                            </div>
+                                            <div class="custom-control custom-checkbox mr-sm-2">
+                                                <input type="checkbox" class="custom-control-input"
+                                                    id="bildirimMesajlari">
+                                                <label class="custom-control-label" for="bildirimMesajlari">Bildirim
+                                                    almak istiyorum.</label>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button id="btnUyeOl" class="btn btn-primary form-control" data-toggle="modal"
+                                            data-target="#bilgilendirme" data-dismiss="modal">Üye Ol</button>
+                                        <br />
+                                        <div class="container">
+                                            <a href="http://facebook.com" class="text-decoration-none text-dark"><i
+                                                    class="fa fa-facebook-square text-info"></i>&nbsp;&nbsp;Facebook İle
+                                                Üye Ol</a>
+                                            <a href="http://gmail.com" class="text-decoration-none text-dark"><i
+                                                    class="fa fa-google-plus-square text-danger"></i>&nbsp;&nbsp;Google
+                                                İle Üye Ol</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Üyelik Bilgilendirme Mesajı-->
+                        <div class="modal fade" id="bilgilendirme" tabindex="-1" role="dialog"
+                            aria-labelledby="bilgilendirmeEkSayfa" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="bilgilendirmeEkSayfa">Bilgilendirme</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Kapat">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Üyeliğiniz başarıyla oluşturuldu.</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-primary" data-dismiss="modal">Tamam</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <br />
+    <br />
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2">
+                <aside class="kategoriler col p-2 d-flex flex-column position-static">
+                    <h5>Kategoriler</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <a class="text-decoration-none text-dark" href="javascript:void(0)"><svg
+                                    class="bi bi-arrow-return-right" width="1em" height="1em" viewBox="0 0 16 16"
+                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M10.146 5.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L12.793 9l-2.647-2.646a.5.5 0 010-.708z"
+                                        clip-rule="evenodd" />
+                                    <path fill-rule="evenodd"
+                                        d="M3 2.5a.5.5 0 00-.5.5v4A2.5 2.5 0 005 9.5h8.5a.5.5 0 000-1H5A1.5 1.5 0 013.5 7V3a.5.5 0 00-.5-.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Yazılım
+                            </a>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a class="text-decoration-none text-dark" href="javascript:void(0)"><svg
+                                            class="bi bi-arrow-return-right" width="1em" height="1em"
+                                            viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M10.146 5.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L12.793 9l-2.647-2.646a.5.5 0 010-.708z"
+                                                clip-rule="evenodd" />
+                                            <path fill-rule="evenodd"
+                                                d="M3 2.5a.5.5 0 00-.5.5v4A2.5 2.5 0 005 9.5h8.5a.5.5 0 000-1H5A1.5 1.5 0 013.5 7V3a.5.5 0 00-.5-.5z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                        C#
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="text-decoration-none text-dark" href="javascript:void(0)"><svg
+                                            class="bi bi-arrow-return-right" width="1em" height="1em"
+                                            viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M10.146 5.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L12.793 9l-2.647-2.646a.5.5 0 010-.708z"
+                                                clip-rule="evenodd" />
+                                            <path fill-rule="evenodd"
+                                                d="M3 2.5a.5.5 0 00-.5.5v4A2.5 2.5 0 005 9.5h8.5a.5.5 0 000-1H5A1.5 1.5 0 013.5 7V3a.5.5 0 00-.5-.5z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                        SQL
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="text-decoration-none text-dark" href="javascript:void(0)"><svg
+                                            class="bi bi-arrow-return-right" width="1em" height="1em"
+                                            viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M10.146 5.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L12.793 9l-2.647-2.646a.5.5 0 010-.708z"
+                                                clip-rule="evenodd" />
+                                            <path fill-rule="evenodd"
+                                                d="M3 2.5a.5.5 0 00-.5.5v4A2.5 2.5 0 005 9.5h8.5a.5.5 0 000-1H5A1.5 1.5 0 013.5 7V3a.5.5 0 00-.5-.5z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                        .Net Framework
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="text-decoration-none text-dark" href="javascript:void(0)"><svg
+                                            class="bi bi-arrow-return-right" width="1em" height="1em"
+                                            viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M10.146 5.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L12.793 9l-2.647-2.646a.5.5 0 010-.708z"
+                                                clip-rule="evenodd" />
+                                            <path fill-rule="evenodd"
+                                                d="M3 2.5a.5.5 0 00-.5.5v4A2.5 2.5 0 005 9.5h8.5a.5.5 0 000-1H5A1.5 1.5 0 013.5 7V3a.5.5 0 00-.5-.5z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                        .Net Core
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="text-decoration-none text-dark" href="javascript:void(0)"><svg
+                                            class="bi bi-arrow-return-right" width="1em" height="1em"
+                                            viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M10.146 5.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L12.793 9l-2.647-2.646a.5.5 0 010-.708z"
+                                                clip-rule="evenodd" />
+                                            <path fill-rule="evenodd"
+                                                d="M3 2.5a.5.5 0 00-.5.5v4A2.5 2.5 0 005 9.5h8.5a.5.5 0 000-1H5A1.5 1.5 0 013.5 7V3a.5.5 0 00-.5-.5z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                        Python
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="list-group-item">
+                            <a class="text-decoration-none text-dark" href="javascript:void(0)"><svg
+                                    class="bi bi-arrow-return-right" width="1em" height="1em" viewBox="0 0 16 16"
+                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M10.146 5.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L12.793 9l-2.647-2.646a.5.5 0 010-.708z"
+                                        clip-rule="evenodd" />
+                                    <path fill-rule="evenodd"
+                                        d="M3 2.5a.5.5 0 00-.5.5v4A2.5 2.5 0 005 9.5h8.5a.5.5 0 000-1H5A1.5 1.5 0 013.5 7V3a.5.5 0 00-.5-.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Sistem
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a class="text-decoration-none text-dark" href="javascript:void(0)"><svg
+                                    class="bi bi-arrow-return-right" width="1em" height="1em" viewBox="0 0 16 16"
+                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M10.146 5.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L12.793 9l-2.647-2.646a.5.5 0 010-.708z"
+                                        clip-rule="evenodd" />
+                                    <path fill-rule="evenodd"
+                                        d="M3 2.5a.5.5 0 00-.5.5v4A2.5 2.5 0 005 9.5h8.5a.5.5 0 000-1H5A1.5 1.5 0 013.5 7V3a.5.5 0 00-.5-.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Web&Grafik
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a class="text-decoration-none text-dark" href="javascript:void(0)"><svg
+                                    class="bi bi-arrow-return-right" width="1em" height="1em" viewBox="0 0 16 16"
+                                    fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M10.146 5.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L12.793 9l-2.647-2.646a.5.5 0 010-.708z"
+                                        clip-rule="evenodd" />
+                                    <path fill-rule="evenodd"
+                                        d="M3 2.5a.5.5 0 00-.5.5v4A2.5 2.5 0 005 9.5h8.5a.5.5 0 000-1H5A1.5 1.5 0 013.5 7V3a.5.5 0 00-.5-.5z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                Haberler
+                            </a>
+                            <ul class="list-group">
+                                <li class="list-group-item">
+                                    <a class="text-decoration-none text-dark" href="javascript:void(0)"><svg
+                                            class="bi bi-arrow-return-right" width="1em" height="1em"
+                                            viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M10.146 5.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L12.793 9l-2.647-2.646a.5.5 0 010-.708z"
+                                                clip-rule="evenodd" />
+                                            <path fill-rule="evenodd"
+                                                d="M3 2.5a.5.5 0 00-.5.5v4A2.5 2.5 0 005 9.5h8.5a.5.5 0 000-1H5A1.5 1.5 0 013.5 7V3a.5.5 0 00-.5-.5z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                        Yazılım
+                                    </a>
+                                </li>
+                                <li class="list-group-item">
+                                    <a class="text-decoration-none text-dark" href="javascript:void(0)"><svg
+                                            class="bi bi-arrow-return-right" width="1em" height="1em"
+                                            viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd"
+                                                d="M10.146 5.646a.5.5 0 01.708 0l3 3a.5.5 0 010 .708l-3 3a.5.5 0 01-.708-.708L12.793 9l-2.647-2.646a.5.5 0 010-.708z"
+                                                clip-rule="evenodd" />
+                                            <path fill-rule="evenodd"
+                                                d="M3 2.5a.5.5 0 00-.5.5v4A2.5 2.5 0 005 9.5h8.5a.5.5 0 000-1H5A1.5 1.5 0 013.5 7V3a.5.5 0 00-.5-.5z"
+                                                clip-rule="evenodd" />
+                                        </svg> Donanım
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </aside>
+            </div>
+            <section class="col-md-7">
+
+                <article>
+                    <header>
+                        <h3>Daha iyi Kodlama için Basit Öneriler</h3>
+                        <span class="text-muted">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Son Düzenlenme Tarihi
+                            02.05.20</span>
+                        <span>&nbsp;&nbsp;<a class="text-muted text-decoration-none" href="javascript:void(0)">C#</a>
+                            </spanp>
+                    </header>
+                    <p class="lead">
+                        Aslında daha okunaklı, daha efektif ve zaman zaman daha verimli kod üretmek için bir kaç küçük
+                        noktaya dikkat etmekte yarar olabilir. Bu sayede sanıyorum ki kodlarımız en azından daha şık
+                        duracaktır. Gelin bu bir kaç küçük püf noktadan bir kaçına hep birlikte bakalım.
+                    </p>
+                    <h4>1 – Auto Property’ ler ve Private Block’ lar</h4>
+                    <p>
+                        İlk olarak özellikle POCO(Plain Old CLR Objects) gibi tip tanımlamalarında yaygın olarak
+                        kullandığımız ve özellikle LINQ(Language Integrated Query) tarafında da çok işimize yarayan Auto
+                        Property kavramına bir bakalım. Bazı durumlarda özelliklerin sadece okunabilir(Read Only) ya da
+                        yazılabilir (Write Only) olmalarını isteyebiliriz. Auto Property kullanmadığımız durumlarda get
+                        veya set bloklarını yazmayarak bu kolayca sağlanabilir. Ancak Auto Property’ lerde get veya set
+                        bloklarının her ikisinin de yazılması zorunludur. Buna rağmen normal Property yazımındaki
+                        felsefe ile hareket ettiğimizde derleme zamanında aşağıdaki ekran görüntüsünde yer alan hata
+                        mesajı ile karşılaşırız.
+                    </p>
+                    <img src="blg225_AutoPropertyError_thumb.gif" alt="Responsive image" style="display: inline;">
+                    <p>Görüldüğü üzere sadece get veya sadece set bloğu yazarak readonly veya writeonly özellik
+                        tanımlanamaz. Ancak private gibi bir erişim belirleyicisini(Access Modifier) devreye alırsak
+                        amacımıza ulaşabiliriz.</p>
+                    <br>
+                    <br>
+                    <br>
+                    <form id="yorum">
+                        <textarea class="form-control" aria-label="With textarea" placeholder="Yorum yap."></textarea>
+                        <br>
+                        <button class="btn btn-primary">Yorum Yap</button>
+                    </form>
+                    <br>
+                    <br>
+                    <br>
+                    <article>
+                        <h3>Yorumlar</h3>
+                        <div class="yorumListesi">
+                            <div class="yorumDiv">
+                                <span><b>Hatice CIPLAK</b></span>
+                                <span><small class="text-muted">02.05.20 20:45</small></span>
+                                <p id="yorum">Güzel bir paylaşım olmuş.</p>
+                                <p><small><a href="">Beğen</a> - <a href="">Paylaş</a></small></p>
+                                <hr />
+                            </div>
+                            <div class="yorumDiv">
+                                <span><b>Thingda</b></span>
+                                <span><small class="text-muted">02.05.20 12:32</small></span>
+                                <p id="yorum">Çoh güziiil.</p>
+                                <p><small><a href="">Beğen</a> - <a href="">Paylaş</a></small></p>
+                                <hr />
+                            </div>
+                            <div class="yorumDiv">
+                                <span><b>Yunusiyus</b></span>
+                                <span><small class="text-muted">02.05.20 14:47</small></span>
+                                <p id="yorum">Abi çok iyi ya.</p>
+                                <p><small><a href="">Beğen</a> - <a href="">Paylaş</a></small></p>
+                                <hr />
+                            </div>
+
+                    </article>
+                    <br>
+                    <br>
+                    <br>
+            </section>
+            <div class="col-md-3">
+                <aside class="col p-3 d-flex flex-column position-static">
+                    <h5>Haberler</h5>
+                    <section>
+                        <a href="javascript:void(0)" class="text-decoration-none"><img src="Windows-10-963x642.jpg"
+                                class="img-fluid">
+                            <p class="lead">Windows 10 Mayıs Güncellemesi Sona Yaklaştı</p>
+                            <p class="text-muted">Microsoft, yeni büyük Windows 10 güncellemesi 2004 için son
+                                dokunuşları yapıyor.</p>
+                        </a>
+                        <hr/>
+                    </section>
+                    <section>
+                        <a href="javascript:void(0)" class="text-decoration-none"><img src="centos_nginx_aspnetcore.png"
+                                class="img-fluid">
+                            <p class="lead">Linux Centos Üzerinde NGINX ile .NET Core Uygulamalarını Çalıştırmak</p>
+                            <p class="text-muted">Microsoft tarafında .NET Core'a geçiş ile birlikte artık .NET
+                                uygulamalarını platform bağımsız (Windows/Linux/Mac) çalıştırabiliyoruz.</p>
+                        </a>
+                        <hr/>
+                    </section>
+                    <section>
+                        <a href="javascript:void(0)" class="text-decoration-none"><img
+                                src="Intel-işlemci-CPU-yonga-963x542.jpg" class="img-fluid">
+                            <p class="lead">Z490 Anakartlar 11. Nesil Intel Rocket Lake-S ile Uyumlu Olabilir</p>
+                            <p class="text-muted">Bir Gigabyte yetkilisi, Rocket Lake-S masaüstü platformun LGA1200
+                                soket ile uyumlu olacağını dile getirdi.</p>
+                        </a>
+                    </section>
+                </aside>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+                <img src="TechAtakFooter.svg" class="img-fluid">
+            </div>
+            <div class="col-md-10 text-right" id="takipFooter">
+                <span>Bizi Takip Edin&nbsp;&nbsp;&nbsp;</span>
+                <a href="https://www.facebook.com">
+                    <i class="fa fa-facebook-square"></i>
+                </a>
+
+                <a href="https://www.instagram.com">
+                    <i class="fa fa-instagram text-warning"></i>
+                </a>
+
+                <a href="https://twitter.com">
+                    <i class="fa fa-twitter"></i>
+                </a>
+
+                <a href="https://www.linkedin.com/company">
+                    <i class="fa fa-linkedin-square text-dark"></i>
+                </a>
+                <a href="https://www.youtube.com">
+                    <i class="fa fa-youtube-play text-danger"></i>
+                </a>
+                <a href="https://www.github.com">
+                    <i class="fa fa-github text-dark"></i>
+                </a>
+            </div>
+        </div>
+        <hr>
+        <div class="row footerMenu">
+            <div class="col-md-3 ">
+                <a href="javascript:void(0)" class="text-decoration-none text-dark">
+                    <p>Hakkımızda</p>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="javascript:void(0)" class="text-decoration-none text-dark">
+                    <p>İletişim</p>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="javascript:void(0)" class="text-decoration-none text-dark">
+                    <p>Yardım</p>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <a href="javascript:void(0)" class="text-decoration-none text-dark">
+                    <p>Sıkça Sorulan Sorular</p>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <small>© 2020 Tüm hakları saklıdır. <br /> Fatma Seda ÖZYURT </small>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="Scripts/jquery-3.0.0.min.js"></script>
+    <script src="Scripts/bootstrap.min.js"></script>
+    <!-- <script src="Scripts/popper.min.js"></script> -->
+    <script>
+        // $(".onMakale").hover(function(){ 
+        //     $(".onMakale").animate({
+        //         "opacity":"0.5"
+        //     });
+        // });
+    </script>
+
+</body>
